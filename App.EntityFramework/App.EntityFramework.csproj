@@ -50,6 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityFramework\AppDbContext.cs" />
+    <Compile Include="Migrations\201612081744428_First migration.cs" />
+    <Compile Include="Migrations\201612081744428_First migration.Designer.cs">
+      <DependentUpon>201612081744428_First migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612081748390_Updating prop.cs" />
+    <Compile Include="Migrations\201612081748390_Updating prop.Designer.cs">
+      <DependentUpon>201612081748390_Updating prop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612081754386_update.cs" />
+    <Compile Include="Migrations\201612081754386_update.Designer.cs">
+      <DependentUpon>201612081754386_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +75,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612081744428_First migration.resx">
+      <DependentUpon>201612081744428_First migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612081748390_Updating prop.resx">
+      <DependentUpon>201612081748390_Updating prop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612081754386_update.resx">
+      <DependentUpon>201612081754386_update.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

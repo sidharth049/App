@@ -1,12 +1,21 @@
-﻿using System;
+﻿using App.Model;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace App.EntityFramework.EntityFramework
 {
-    class AppDbContext
+    public class AppDbContext : DbContext
     {
+        public AppDbContext() : base("AppDB")
+        {
+
+        }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserDetail> UserDetails { get; set; }
     }
 }

@@ -12,8 +12,15 @@ namespace App.Model
     public class User 
     {
         public int UserId { get; set; }
+
+        [MaxLength(200)]
+        [Required]
         public string Email { get; set; }
+
+        [MaxLength(200)]
+        [Required]
         public string Password { get; set; }
+
         public bool IsActive { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }

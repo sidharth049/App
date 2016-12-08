@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Model", "App.Model\App.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.EntityFramework", "App.EntityFramework\App.EntityFramework.csproj", "{0CF58D2B-EE0D-4E00-84F2-D41E551FBA8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Web", "App.Web\App.Web.csproj", "{D2CD3AFB-2F8E-4314-B4EC-2225AEA40915}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0CF58D2B-EE0D-4E00-84F2-D41E551FBA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CF58D2B-EE0D-4E00-84F2-D41E551FBA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CF58D2B-EE0D-4E00-84F2-D41E551FBA8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2CD3AFB-2F8E-4314-B4EC-2225AEA40915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2CD3AFB-2F8E-4314-B4EC-2225AEA40915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2CD3AFB-2F8E-4314-B4EC-2225AEA40915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2CD3AFB-2F8E-4314-B4EC-2225AEA40915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
