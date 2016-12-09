@@ -17,5 +17,12 @@ namespace App.EntityFramework.EntityFramework
 
         public DbSet<User> Users { get; set; }
         public DbSet<UserDetail> UserDetails { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<RecipeComment> RecipeComments { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("dbo");
+        }
     }
 }

@@ -24,5 +24,8 @@ namespace App.Model
         public bool IsActive { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
+
+        public virtual ICollection<Recipe> Recipes { get; set; }
+        public virtual ICollection<RecipeComment> RecipeComments { get; set; }
     }
 }

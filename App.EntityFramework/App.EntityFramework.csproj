@@ -63,6 +63,22 @@
     <Compile Include="Migrations\201612081754386_update.Designer.cs">
       <DependentUpon>201612081754386_update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612091801051_Adding again.cs" />
+    <Compile Include="Migrations\201612091801051_Adding again.Designer.cs">
+      <DependentUpon>201612091801051_Adding again.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612091806218_Correct Recipe.cs" />
+    <Compile Include="Migrations\201612091806218_Correct Recipe.Designer.cs">
+      <DependentUpon>201612091806218_Correct Recipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612091809452_Correct Recipe 1.cs" />
+    <Compile Include="Migrations\201612091809452_Correct Recipe 1.Designer.cs">
+      <DependentUpon>201612091809452_Correct Recipe 1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612091822365_Correct Recipe 2.cs" />
+    <Compile Include="Migrations\201612091822365_Correct Recipe 2.Designer.cs">
+      <DependentUpon>201612091822365_Correct Recipe 2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,6 +101,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612081754386_update.resx">
       <DependentUpon>201612081754386_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612091801051_Adding again.resx">
+      <DependentUpon>201612091801051_Adding again.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612091806218_Correct Recipe.resx">
+      <DependentUpon>201612091806218_Correct Recipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612091809452_Correct Recipe 1.resx">
+      <DependentUpon>201612091809452_Correct Recipe 1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612091822365_Correct Recipe 2.resx">
+      <DependentUpon>201612091822365_Correct Recipe 2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
