@@ -33,7 +33,7 @@ namespace App.Repositories
 
         public virtual void Add(T entity)
         {
-            dbSet.Add(T);
+            dbSet.Add(entity);
         }
 
         public virtual void Update(T entity)
