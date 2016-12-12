@@ -20,6 +20,11 @@ namespace App.EntityFramework.EntityFramework
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<RecipeComment> RecipeComments { get; set; }
 
+        public virtual void Commit()
+        {
+            base.SaveChanges();
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("dbo");
