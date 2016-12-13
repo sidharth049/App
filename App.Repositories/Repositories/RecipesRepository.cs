@@ -14,5 +14,10 @@ namespace App.Repositories
         {
 
         }
+
+        public IEnumerable<Recipe> GetRecipesByTitle(string title)
+        {
+            return this.DbContext.Recipes.Where(e => e.Title.Contains(title)).ToList();
+        }
     }
 }

@@ -41,8 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Interface\IRecipesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\RecipesService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.Infrastructure\App.Infrastructure.csproj">
+      <Project>{aa7cb39a-7648-462e-b7d3-9f0ac927a05f}</Project>
+      <Name>App.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Model\App.Model.csproj">
+      <Project>{1132b78c-b0fc-44f2-a24c-063236ff6203}</Project>
+      <Name>App.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Repositories\App.Repositories.csproj">
+      <Project>{7e5b0fa6-1acc-44f9-98c2-b44574e07f15}</Project>
+      <Name>App.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

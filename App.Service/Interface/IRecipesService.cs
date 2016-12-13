@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace App.Service
 {
-    public class Class1
+    public interface IRecipesService
     {
+
     }
 }
