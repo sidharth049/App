@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using App.Web.Mappings;
 using Autofac;
 using App.Infrastructure;
 using App.Repositories;
@@ -18,7 +17,6 @@ namespace App.Web.App_Start
         public static void Run()
         {
             SetAutofacContainer();
-            AutoMapperConfiguration.Configure();
         }
 
         private static void SetAutofacContainer()

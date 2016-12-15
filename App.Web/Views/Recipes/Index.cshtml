@@ -1,0 +1,13 @@
+﻿@model IEnumerable<App.ViewModel.RecipeViewModel>
+
+@{
+    ViewBag.Title = "Yummy Recipes";
+}
+
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Title)</th>
+        <th>@Html.DisplayNameFor(model => model.Preparation)</th>
+    </tr>
+</table>
+

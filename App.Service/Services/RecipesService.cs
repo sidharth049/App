@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using App.Infrastructure;
 using App.Repositories;
 using App.Model;
+using App.ViewModel;
+using AutoMapper;
 
 namespace App.Service
 {
-    public class RecipesService : IRecipesService
+    public class RecipesService : ServiceBase, IRecipesService
     {
         private readonly IRecipesRepository recipesRepository;
         private readonly IUnitOfWork unitOfWork;
@@ -20,21 +22,25 @@ namespace App.Service
             this.unitOfWork = unitOfWork;
         }
 
-        public Recipe GetRecipe(int id)
+        public RecipeViewModel GetRecipe(int id)
         {
-            return recipesRepository.GetById(id);
+            return Mapper.Map<Recipe, RecipeViewModel>(recipesRepository.GetById(id));
         }
 
-        public IEnumerable<Recipe> GetRecipes(string title = null)
+        public IEnumerable<RecipeViewModel> GetRecipes(string title = null)
         {
+            IEnumerable<RecipeViewModel> recipeViewModel;
+
             if (string.IsNullOrEmpty(title))
             {
-                return recipesRepository.GetAll();
+                recipeViewModel = Mapper.Map<IEnumerable<Recipe>, IEnumerable<RecipeViewModel>>(recipesRepository.GetAll());
             }
             else
             {
-                return recipesRepository.GetRecipesByTitle(title);
+                recipeViewModel = Mapper.Map<IEnumerable<Recipe>, IEnumerable<RecipeViewModel>>(recipesRepository.GetRecipesByTitle(title));
             }
+
+            return recipeViewModel;
         }
     }
 }
