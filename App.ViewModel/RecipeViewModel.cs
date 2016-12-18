@@ -11,5 +11,6 @@ namespace App.ViewModel
         public int RecipeId { get; set; }
         public string Title { get; set; }
         public string Preparation { get; set; }
+        public int CreatedBy { get; set; }
     }
 }

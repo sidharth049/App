@@ -13,5 +13,9 @@ namespace App.Service
         RecipeViewModel GetRecipe(int id);
 
         IEnumerable<RecipeViewModel> GetRecipes(string title = null);
+
+        void AddRecipe(RecipeViewModel recipe);
+
+        void Save();
     }
 }

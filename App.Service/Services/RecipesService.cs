@@ -42,5 +42,15 @@ namespace App.Service
 
             return recipeViewModel;
         }
+
+        public void AddRecipe(RecipeViewModel recipe)
+        {
+            recipesRepository.Add(Mapper.Map<RecipeViewModel, Recipe>(recipe));
+        }
+
+        public void Save()
+        {
+            unitOfWork.Commit();
+        }
     }
 }

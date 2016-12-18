@@ -79,6 +79,10 @@
     <Compile Include="Migrations\201612091822365_Correct Recipe 2.Designer.cs">
       <DependentUpon>201612091822365_Correct Recipe 2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612181026251_defaultdateforcreateddate.cs" />
+    <Compile Include="Migrations\201612181026251_defaultdateforcreateddate.Designer.cs">
+      <DependentUpon>201612181026251_defaultdateforcreateddate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -113,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612091822365_Correct Recipe 2.resx">
       <DependentUpon>201612091822365_Correct Recipe 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612181026251_defaultdateforcreateddate.resx">
+      <DependentUpon>201612181026251_defaultdateforcreateddate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

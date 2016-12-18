@@ -25,6 +25,8 @@ namespace App.Model
         public string Gender { get; set; }
 
         public string Country { get; set; }
+
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
 

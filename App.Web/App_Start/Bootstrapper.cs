@@ -9,6 +9,7 @@ using App.Service;
 using System.Web.Mvc;
 using Autofac.Integration.Mvc;
 using System.Reflection;
+using App.Service.Mappings;
 
 namespace App.Web.App_Start
 {
@@ -17,6 +18,7 @@ namespace App.Web.App_Start
         public static void Run()
         {
             SetAutofacContainer();
+            AutoMapperConfiguration.Configure();
         }
 
         private static void SetAutofacContainer()

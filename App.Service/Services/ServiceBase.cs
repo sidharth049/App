@@ -11,7 +11,7 @@ namespace App.Service
     {
         public ServiceBase()
         {
-            AutoMapperConfiguration.Configure();
+            
         }
     }
 }

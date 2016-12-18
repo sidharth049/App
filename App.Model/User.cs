@@ -22,6 +22,8 @@ namespace App.Model
         public string Password { get; set; }
 
         public bool IsActive { get; set; }
+
+        [Required, DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
 

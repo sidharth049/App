@@ -4,10 +4,10 @@
     ViewBag.Title = "Yummy Recipes";
 }
 
-<table>
-    <tr>
-        <th>@Html.DisplayNameFor(model => model.Title)</th>
-        <th>@Html.DisplayNameFor(model => model.Preparation)</th>
-    </tr>
-</table>
+@Html.ActionLink("Post new Recipe","Add",null, new { @class = "btn btn-primary" })
 
+@foreach (var recipe in Model)
+{
+    <h3>@Html.ActionLink(recipe.Title, "Recipe", new { id = recipe.RecipeId})</h3>
+    <p>@Html.DisplayFor(modelItem => recipe.Preparation)</p>
+}
