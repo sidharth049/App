@@ -19,5 +19,12 @@ namespace App.Repositories
         {
             return this.DbContext.Recipes.Where(e => e.Title.Contains(title)).ToList();
         }
+
+        public void DeleteRecipe(int id)
+        {
+            var recipe = this.DbContext.Recipes.SingleOrDefault(e => e.RecipeId.Equals(id));
+
+            this.DbContext.Recipes.Remove(recipe);
+        }
     }
 }

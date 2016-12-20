@@ -16,6 +16,10 @@ namespace App.Service
 
         void AddRecipe(RecipeViewModel recipe);
 
+        void UpdateRecipe(RecipeViewModel recipe);
+
+        void DeleteRecipe(int id);
+
         void Save();
     }
 }

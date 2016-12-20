@@ -12,5 +12,8 @@ namespace App.ViewModel
         public string Title { get; set; }
         public string Preparation { get; set; }
         public int CreatedBy { get; set; }
+
+        public int UpdatedBy { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 }

@@ -1,0 +1,26 @@
+﻿@model App.ViewModel.RecipeViewModel
+
+@{
+    ViewBag.Title = "Edit your recipe";
+}
+
+<h2>Edit your recipe</h2>
+
+@using (Html.BeginForm("Update", "Recipes", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.RecipeId)
+    @Html.HiddenFor(model => model.CreatedBy)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title, htmlAttributes: new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Preparation)
+        @Html.TextAreaFor(model => model.Preparation, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-primary" />
+    </div>
+}
+

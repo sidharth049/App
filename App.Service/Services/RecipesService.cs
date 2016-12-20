@@ -48,6 +48,16 @@ namespace App.Service
             recipesRepository.Add(Mapper.Map<RecipeViewModel, Recipe>(recipe));
         }
 
+        public void UpdateRecipe(RecipeViewModel recipe)
+        {
+            recipesRepository.Update(Mapper.Map<RecipeViewModel, Recipe>(recipe));                
+        }
+
+        public void DeleteRecipe(int id)
+        {
+            recipesRepository.DeleteRecipe(id);
+        }
+
         public void Save()
         {
             unitOfWork.Commit();

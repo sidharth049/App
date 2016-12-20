@@ -6,6 +6,15 @@
 
 <div class="jumbotron">
     <h1>@Html.DisplayFor(model => model.Title)</h1>
+    
+
+    @using (Html.BeginForm("Delete", "Recipes", new { id = Model.RecipeId }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.RecipeId)
+        @Html.ActionLink("Edit", "Edit", new { id = Model.RecipeId }, new { @class = "btn btn-primary", @role = "button" })
+        <input type="submit" value="Delete" class="btn btn-primary" />
+    }
 </div>
 <div class="row">
     <div class="col-md-12">

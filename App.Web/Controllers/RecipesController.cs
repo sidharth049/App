@@ -48,5 +48,34 @@ namespace App.Web.Controllers
 
             return RedirectToAction("Index");
         }
+
+
+        public ActionResult Edit(int id)
+        {
+            return View(recipesService.GetRecipe(id));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Update([Bind(Include = "RecipeId,Title,Preparation,CreatedBy")]RecipeViewModel recipe)
+        {
+            recipe.UpdatedBy = CurrentUser;
+            recipe.UpdatedDate = DateTime.UtcNow;
+
+            recipesService.UpdateRecipe(recipe);
+            recipesService.Save();
+
+            return View("Recipe", recipesService.GetRecipe(recipe.RecipeId));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            recipesService.DeleteRecipe(id);
+            recipesService.Save();
+
+            return RedirectToAction("Index");
+        }
     }
 }

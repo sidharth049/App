@@ -11,5 +11,7 @@ namespace App.Repositories
     public interface IRecipesRepository : IRepository<Recipe>
     {
         IEnumerable<Recipe> GetRecipesByTitle(string title);
+
+        void DeleteRecipe(int id);
     }
 }
