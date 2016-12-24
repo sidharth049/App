@@ -13,7 +13,6 @@ namespace App.Web.Controllers
     public class RecipesController : BaseController
     {
         private readonly IRecipesService recipesService;
-        private readonly IUnitOfWork unitOfWork;
 
         public RecipesController(IRecipesService recipesService)
         {
@@ -41,12 +40,17 @@ namespace App.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Add(RecipeViewModel recipe)
         {
-            recipe.CreatedBy = CurrentUser;
+            if (ModelState.IsValid)
+            {
+                recipe.CreatedBy = CurrentUser;
 
-            recipesService.AddRecipe(recipe);
-            recipesService.Save();
+                recipesService.AddRecipe(recipe);
+                recipesService.Save();
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+
+            return View(recipe);
         }
 
 
@@ -59,13 +63,18 @@ namespace App.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Update([Bind(Include = "RecipeId,Title,Preparation,CreatedBy")]RecipeViewModel recipe)
         {
-            recipe.UpdatedBy = CurrentUser;
-            recipe.UpdatedDate = DateTime.UtcNow;
+            if (ModelState.IsValid)
+            {
+                recipe.UpdatedBy = CurrentUser;
+                recipe.UpdatedDate = DateTime.UtcNow;
 
-            recipesService.UpdateRecipe(recipe);
-            recipesService.Save();
+                recipesService.UpdateRecipe(recipe);
+                recipesService.Save();
 
-            return View("Recipe", recipesService.GetRecipe(recipe.RecipeId));
+                return View("Recipe", recipesService.GetRecipe(recipe.RecipeId));
+            }
+
+            return View("Edit", recipesService.GetRecipe(recipe.RecipeId));
         }
 
         [HttpPost]
