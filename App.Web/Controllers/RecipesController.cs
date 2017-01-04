@@ -43,6 +43,8 @@ namespace App.Web.Controllers
             if (ModelState.IsValid)
             {
                 recipe.CreatedBy = CurrentUser;
+                recipe.CreatedDate = DateTime.UtcNow;
+                recipe.UpdatedDate = DateTime.UtcNow;
 
                 recipesService.AddRecipe(recipe);
                 recipesService.Save();
