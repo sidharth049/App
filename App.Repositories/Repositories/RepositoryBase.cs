@@ -12,7 +12,7 @@ namespace App.Repositories
     public abstract class RepositoryBase<T> where T : class
     {
         private AppDbContext dbContext;
-        private readonly IDbSet<T> dbSet;
+        private readonly DbSet<T> dbSet;
 
         protected IDbFactory DbFactory
         {
@@ -51,7 +51,7 @@ namespace App.Repositories
         {
             return dbSet.Find(id);
         }
-
+              
         public virtual IEnumerable<T> GetAll()
         {
             return dbSet.ToList();

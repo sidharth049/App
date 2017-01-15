@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppUser\LoginViewModel.cs" />
+    <Compile Include="AppUser\RegisterViewModel.cs" />
     <Compile Include="RecipeCommentViewModel.cs" />
     <Compile Include="RecipeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
